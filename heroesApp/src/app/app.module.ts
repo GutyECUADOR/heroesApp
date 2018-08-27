@@ -12,6 +12,10 @@ import { HeroeComponent } from './components/heroe/heroe.component';
 // RUTAS
 import { APP_ROUNTING } from './app.routes';
 
+// SERVICIOS
+
+import { HeroeService } from './services/heroe.service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,7 @@ import { APP_ROUNTING } from './app.routes';
     BrowserModule,
     APP_ROUNTING
   ],
-  providers: [],
+  providers: [HeroeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
