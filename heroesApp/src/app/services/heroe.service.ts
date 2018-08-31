@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HeroeService {
-private heroes:Heroe[];
+private heroes: Heroe[];
 
-  constructor() { 
+  constructor() {
     console.log('Servicio listo');
     // Emulacion del API que debe devolver un array del tipo de objeto.
     this.heroes = [
@@ -62,15 +62,20 @@ private heroes:Heroe[];
     ];
   }
 
-  getHeroes(){
+  getHeroes(index: Number) {
     return this.heroes;
   }
+
+  getHeroe(indice: Number) {
+    console.log(this.heroes[0]);
+  }
+
 }
 
 export interface Heroe {
-  nombre: String,
-  bio: String,
-  img: String,
-  aparicion: String,
-  casa: String
+  nombre: String;
+  bio: String;
+  img: String;
+  aparicion: String;
+  casa: String;
 }

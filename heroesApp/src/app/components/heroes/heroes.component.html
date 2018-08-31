@@ -1,6 +1,6 @@
 <div class="card-columns animated fadeIn fast">
   
-  <div class="card text-center" *ngFor="let heroe of heroes" >
+  <div class="card text-center" *ngFor="let heroe of heroes; let id = index" >
     <img class="card-img-top" [src]="heroe.img" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
@@ -8,7 +8,8 @@
       <small class="text-muted">{{ heroe.aparicion}}</small>
     </div>
     <div class="card-footer">
-      <button class="btn btn-primary btn-block">Mas informacion</button>
+      <button [routerLink]="[ '/heroe', id ]" class="btn btn-primary btn-block">Mas informacion</button>
+  
     </div>
   </div>
 </div>  

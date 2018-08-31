@@ -8,9 +8,10 @@ import { HeroeService, Heroe } from '../../services/heroe.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  private heroes:Heroe[];
+  private heroes: Heroe[];
 
-  constructor(private _heroeService: HeroeService) { }
+  constructor(private _heroeService: HeroeService) {
+  }
 
   ngOnInit() {
     this.heroes = this._heroeService.getHeroes();
