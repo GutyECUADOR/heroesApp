@@ -17,8 +17,12 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control form-control-sm" id="inputdefault" type="text">
-      <button class="btn btn-outline-primary btn-sm" type="submit">Buscar</button>
+      <input 
+       (keyup)="searchHeroe(txt_busqueda.value)"
+        class="form-control form-control-sm" #txt_busqueda name="txt_busqueda" type="text">
+      <button 
+        (click)="searchHeroe(txt_busqueda.value)"
+        class="btn btn-outline-primary btn-sm" type="button">Buscar</button>
     </form>
   </div>
 </nav>

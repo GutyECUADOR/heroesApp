@@ -1,6 +1,8 @@
+<h3>Resultados para: </h3>
+
 <div class="card-columns animated fadeIn fast">
   
-  <div class="card text-center" *ngFor="let heroe of heroes; let id = index" >
+  <div class="card text-center" *ngFor="let heroe of heroesBusqueda" >
     <img class="card-img-top" [src]="heroe.img" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{ heroe.nombre }}</h5>
@@ -8,7 +10,7 @@
       <small class="text-muted">{{ heroe.aparicion}}</small>
     </div>
     <div class="card-footer">
-      <button (click)="showHeroe(id)" class="btn btn-primary btn-block">Mas informacion</button>
+      <button (click)="regresar()" class="btn btn-primary btn-block">Regresar</button>
   
     </div>
   </div>

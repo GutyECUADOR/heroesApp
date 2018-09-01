@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class HeroeService {
 private heroes: Heroe[];
+private resultadosBusqueda: Heroe[] = [];
+
 
   constructor() {
     console.log('Servicio listo');
@@ -62,12 +64,25 @@ private heroes: Heroe[];
     ];
   }
 
-  getHeroes(index: Number) {
+  getHeroes(): Heroe[] {
     return this.heroes;
   }
 
-  getHeroe(indice: Number) {
-    console.log(this.heroes[0]);
+  getHeroe(indice: number): Heroe {
+    return this.heroes[indice];
+  }
+
+  searchHeroes(termino: string){
+    this.resultadosBusqueda = [];
+    termino = termino.toLowerCase(); // Termino que llega del formulario
+    for (let heroe of this.heroes) { 
+      let nombre = heroe.nombre.toLowerCase(); //obtenemos la propiedad nombre del cada uno de los objetos
+      if (nombre.indexOf(termino) >= 0){ //index of retorna -1 si no existe la cadena dentro de la otra
+        this.resultadosBusqueda.push(heroe);
+        
+      }
+    }
+    return this.resultadosBusqueda;
   }
 
 }

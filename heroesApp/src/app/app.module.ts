@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 
 // RUTAS
 import { APP_ROUNTING } from './app.routes';
@@ -17,13 +18,15 @@ import { APP_ROUNTING } from './app.routes';
 import { HeroeService } from './services/heroe.service';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     InicioComponent,
     HeroesComponent,
-    HeroeComponent
+    HeroeComponent,
+    BusquedaComponent
   ],
   imports: [
     BrowserModule,
