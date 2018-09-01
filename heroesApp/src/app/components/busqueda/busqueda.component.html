@@ -1,17 +1,13 @@
-<h3>Resultados para: </h3>
+<h3>Resultados para: <small> {{ termino }} </small></h3>
+
+<div *ngIf="heroesBusqueda.length == 0" class="alert alert-info" role="alert">
+  <h4 class="alert-heading">No existe el heroe!</h4>
+  <p>No se pudieron encontrar resultados, intenta buscar como por ejemplo "man".</p>
+  <hr>
+  <p class="mb-0"><button (click)="regresar()" class="btn btn-primary">Regresar</button></p>
+</div>
 
 <div class="card-columns animated fadeIn fast">
-  
-  <div class="card text-center" *ngFor="let heroe of heroesBusqueda" >
-    <img class="card-img-top" [src]="heroe.img" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{ heroe.nombre }}</h5>
-      <p class="card-text">{{ heroe.bio}}</p>
-      <small class="text-muted">{{ heroe.aparicion}}</small>
-    </div>
-    <div class="card-footer">
-      <button (click)="regresar()" class="btn btn-primary btn-block">Regresar</button>
-  
-    </div>
-  </div>
+
+  <app-tarjeta-heroe [heroe]="heroe" [indice]="id" (heroeSeleccionadoEvent)="regresar($event)" *ngFor="let heroe of heroesBusqueda; let id = index"></app-tarjeta-heroe>
 </div>  

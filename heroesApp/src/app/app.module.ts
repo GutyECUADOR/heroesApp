@@ -16,6 +16,7 @@ import { APP_ROUNTING } from './app.routes';
 // SERVICIOS
 
 import { HeroeService } from './services/heroe.service';
+import { TarjetaHeroeComponent } from './components/tarjeta-heroe/tarjeta-heroe.component';
 
 
 
@@ -26,7 +27,8 @@ import { HeroeService } from './services/heroe.service';
     InicioComponent,
     HeroesComponent,
     HeroeComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    TarjetaHeroeComponent
   ],
   imports: [
     BrowserModule,

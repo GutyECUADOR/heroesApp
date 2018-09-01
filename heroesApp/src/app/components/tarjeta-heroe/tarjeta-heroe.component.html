@@ -1,0 +1,12 @@
+<div class="card text-center">
+  <img class="card-img-top" [src]="heroe.img" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{ heroe.nombre }}</h5>
+    <p class="card-text">{{ heroe.bio}}</p>
+    <small class="text-muted">{{ heroe.aparicion}}</small>
+  </div>
+  <div class="card-footer">
+    <button (click)="showHeroe()" class="btn btn-primary btn-block">Mas informacion</button>
+
+  </div>
+</div>
